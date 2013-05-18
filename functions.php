@@ -30,6 +30,6 @@ function makeUrl($where, $abs = false)
 		$ret .= "http://".$_SERVER["HTTP_HOST"];
 	$ret .= $_SERVER["PHP_SELF"];
 	if($where != "")
-		$ret .= makeArgs($where);
+		$ret .= "?".makeArgs($where);
 	return $ret;
 }
